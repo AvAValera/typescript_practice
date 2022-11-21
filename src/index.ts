@@ -1,39 +1,29 @@
-interface Person {
-    readonly name: string;
-    age: number;
-    telephone: string;
-    email?: string;
+interface Man {
+    name: string;
+    age?: number;
 }
 
-interface Developer {
-    stack: "Front" | "Back";
-    readonly lastWork: string;
-    readonly experience: number;
-    rang: "junior" | "middle" | "senior";
-}
-
-interface Vacancy extends Person, Developer {
-    pay: number;
-    ["work-time"]: number;
-}
-
-const worker: Vacancy = {
-    "work-time": 8,
-    age: 30,
-    experience: 3,
-    lastWork: "company",
+const personFirst: Man = {
     name: "Well",
-    pay: 2500,
-    rang: "middle",
-    stack: "Front",
-    telephone: "333333-33-33",
-    email: "some@mail",
+    age: 30,
 };
 
-type List = {
-    arr: string | number
+function checkAge(man: Man): boolean{
+    if(typeof man.age === "number"){
+        return true;
+    }
+    else{
+        return false;
+    }
 }
 
-interface IList {
-    arr: string | number
+function showMan(man: Man) {
+    if(checkAge(personFirst)){
+        console.log(man.name, man.age);
+    }
+    else{
+        console.log(man.name);
+    }
 }
+
+showMan(personFirst);
