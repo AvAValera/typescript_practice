@@ -1,7 +1,7 @@
 // Перепишите js-функцию на TypeScript
 
-function slice(str:string, start:number, end?: number): string {
-    let newStr = "";
+function slice(str: string, start: number, end?: number) {
+    let newStr:string = '';
 
     let lastIndex: number;
 
@@ -18,4 +18,4 @@ function slice(str:string, start:number, end?: number): string {
     return newStr;
 }
 
-console.log(slice("Home", 1))
+console.log(slice("Hello", 2));
