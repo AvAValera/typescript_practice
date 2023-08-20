@@ -1,0 +1,91 @@
+:global {
+  body[theme="dark"] {
+    --bg-color: #1e2946;
+    --shadow-color: none;
+    --card-info-color: #141c2e;
+  }
+  body[theme="light"] {
+    --bg-color: white;
+    --shadow-color: rgba(0, 0, 0, 0.15);
+    --card-info-color: #f6f8ff
+  }
+}
+
+.cardUser {
+  &__container {
+    background: var(--bg-color);
+    box-shadow: 0px 5px 10px var(--shadow-color);
+    width: 100%;
+    padding: 40px;
+    border-radius: 10px;
+    &_left {
+      width: 100%;
+    }
+    &_header {
+      display: flex;
+      flex-direction: row;
+      gap: 40px;
+      &Text {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+      }
+    }
+    &_img {
+      border-radius: 100%;
+      width: 120px;
+    }
+    &_login {
+      display: inline-block;
+      color: rgb(0, 153, 255);
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    &_bio{
+      margin-bottom: 20px;
+    }
+  }
+}
+.cardInfo {
+  background-color: #1e2946;
+  padding: 10px;
+  border-radius: 10px;
+  background: var(--card-info-color);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 20px;
+  &__column{
+    display: flex;
+    flex-direction: column;
+
+  }
+  &__header{
+    font-size: 12px;
+  }
+  &__count{
+    font-weight: bold;
+    font-size: 20px;
+  }
+}
+
+.cardSocial {
+  &__container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+  }
+  &__block{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  &__header{
+    font-size: 12px;
+  }
+  &__value{
+    font-weight: bold;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,15 @@
+:global{
+  body[theme="dark"]{
+    background: #141c2e;
+  }
+  body[theme="light"]{
+    background: #f6f8ff;
+  }
+}
+
+.app{
+  &__container{
+    margin: auto;
+    width: 730px;
+  }
+}
